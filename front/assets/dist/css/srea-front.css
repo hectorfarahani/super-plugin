@@ -1,0 +1,51 @@
+.srea-loader {
+  border: 3px solid rgba(200, 200, 200, 0.7);
+  border-top: 3px solid rgba(66, 66, 66, 0.5);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 5px;
+  animation: spin 1s linear infinite;
+}
+
+.srea-template {
+  display: flex;
+}
+
+.srea-template .srea-reaction-item {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  height: 28px;
+}
+
+.srea-template .srea-button {
+  cursor: pointer;
+}
+
+.srea-template .srea-template-count {
+  width: 23px;
+  text-align: center;
+  font-size: medium;
+}
+
+.srea-template .srea-button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.srea-template .srea-button:focus, .srea-template .srea-button:active, .srea-template .srea-button:hover {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

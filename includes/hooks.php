@@ -1,0 +1,3 @@
+<?php
+
+namespace SPSP\Includes;
