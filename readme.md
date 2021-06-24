@@ -17,3 +17,10 @@
 * Search for **`SUPL`** and replace with your prefix. This is used as PHP constant prefix. Could be a 4 letter prefix, or full name all **uppercase**. E.G: **`MYPL`** or **`MY_PLUGIN`**
 
 * Search for **`supl`** and replace with your prefix. This is used as prefix for files. Could be a 4 letter prefix, or full name all **kebab-case**. E.G: **`mypl`** or **`my-plugin`** (4 letter prefix is recommended)
+
+
+---
+### Branching:
+**main** is used for releases. It is safe to create your own project from **main** branch.
+
+**develop** is used for development and it will be merged to main right before releasing a new version.
