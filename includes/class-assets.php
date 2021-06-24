@@ -1,6 +1,6 @@
 <?php
 
-namespace SPSP\Includes;
+namespace Super_Plugin\Includes;
 class Assets {
 
 	public static $instance = null;
@@ -38,11 +38,11 @@ class Assets {
 	}
 
 	public function register_front_scripts() {
-		wp_register_script( 'SPSP-front', SPSP_FRONT_ASSETS . 'js/SPSP-front' . $this->suffix . '.js', array( 'jquery' ), SPSP_VERSION, true );
+		wp_register_script( 'supl-front', SUPL_FRONT_ASSETS . 'js/supl-front' . $this->suffix . '.js', array( 'jquery' ), SUPL_VERSION, true );
 	}
 
 	public function register_front_styles() {
-		wp_register_style( 'SPSP-front', SPSP_FRONT_ASSETS . 'css/SPSP-front' . $this->suffix . '.css', array(), SPSP_VERSION, 'all' );
+		wp_register_style( 'supl-front', SUPL_FRONT_ASSETS . 'css/supl-front' . $this->suffix . '.css', array(), SUPL_VERSION, 'all' );
 	}
 
 	public function register_admin_assets() {
@@ -51,11 +51,11 @@ class Assets {
 	}
 
 	public function register_admin_scripts() {
-		wp_register_script( 'SPSP-admin', SPSP_ADMIN_ASSETS . 'js/SPSP-admin' . $this->suffix . '.js', SPSP_VERSION, true );
+		wp_register_script( 'SUPL-admin', SUPL_ADMIN_ASSETS . 'js/supl-admin' . $this->suffix . '.js', SUPL_VERSION, true );
 	}
 
 	public function register_admin_styles() {
-		wp_register_style( 'SPSP-admin', SPSP_ADMIN_ASSETS . 'css/SPSP-admin' . $this->suffix . '.css', array(), SPSP_VERSION, 'all' );
+		wp_register_style( 'supl-admin', SUPL_ADMIN_ASSETS . 'css/supl-admin' . $this->suffix . '.css', array(), SUPL_VERSION, 'all' );
 	}
 
 	public function localize() {
@@ -63,6 +63,6 @@ class Assets {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 
-		wp_localize_script( 'SPSP-front', 'SPSP', $i10n );
+		wp_localize_script( 'supl-front', 'SUPER_PLUGINS', $i10n );
 	}
 }

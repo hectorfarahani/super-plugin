@@ -1,3 +1,3 @@
 <?php
 
-namespace SPSP\Includes;
+namespace Super_Plugin\Includes;

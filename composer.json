@@ -1,10 +1,10 @@
 {
-  "name": "hector/spsp",
+  "name": "hectorfarahani/super-plugin",
   "type": "wordpress-plugin",
   "license": "GPLv3",
   "authors": [
     {
-      "name": "Hector",
+      "name": "Hossein",
       "email": "h.farahani@outlook.com"
     }
   ],

@@ -1,6 +1,6 @@
 var version = '0.0.0';
 var versioningFiles = [
-  'SPSP.php',
+  'super-plugin.php',
   'constants.php',
   'readme.txt'
 ];
@@ -48,15 +48,15 @@ gulp.task(
       .pipe(
         wpPot(
           {
-            domain: 'SPSP',
-            destFile: 'SPSP.pot',
-            package: 'WP_Reactions',
-            lastTranslator: 'Hector Farhan <hi@farahani.dev>',
-            team: 'Hector Farhan <hi@farahani.dev>'
+            domain: 'super-plugin',
+            destFile: 'super-plugin.pot',
+            package: 'super-plugin',
+            lastTranslator: 'Super Plugin team<you@email.test>',
+            team: 'Super Plugin team <you@email.test>'
           }
         )
       )
-      .pipe(gulp.dest('languages/SPSP.pot'))
+      .pipe(gulp.dest('languages/super-plugin.pot'))
   }
 );
 
@@ -93,10 +93,10 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'srea-admin', dirname: '' }))
+      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'srea-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
 
     gulp.src(
@@ -106,10 +106,10 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'srea-front', dirname: '' }))
+      .pipe(rename({ basename: 'supl-front', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'srea-front', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/css'))
     cb();
   }
@@ -127,10 +127,10 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'srea-admin', dirname: '' }))
+      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'srea-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'));
 
     gulp.src(
@@ -141,10 +141,10 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'srea-front', dirname: '' }))
+      .pipe(rename({ basename: 'supl-front', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'srea-front', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/js'));
 
     cb();
@@ -158,7 +158,7 @@ gulp.task(
     gulp.src(versioningFiles)
       .pipe(
         replace(
-          /(\* Version:.+\s|SREA_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
+          /(\* Version:.+\s|SUPL_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
           function (match, p1, p2) {
             if (p2 === version) {
               console.log('The current version is ' + version + '. No changes.')
@@ -197,7 +197,7 @@ gulp.task('watch', function (cb) {
   // Init browserSync
   browserSync.init({
     injectChanges: true,
-    proxy: '74.wordpress.test/'
+    proxy: 'wp.wp' // Local test env
   })
   gulp.watch(['./front/**/*.scss', './admin/**/*.scss'], gulp.parallel(['css', 'stream']))
   gulp.watch(['./front/**/*.js', './admin/**/*.js'], gulp.parallel(['js', 'stream']))
@@ -213,7 +213,7 @@ gulp.task('watch', function (cb) {
 // Copy task
 gulp.task('copy', function () {
   return gulp.src(srcs)
-    .pipe(gulp.dest('/home/hector/svn-releases/SPSP/trunk'))
+    .pipe(gulp.dest('/home/hector/svn-releases/super-plugin/trunk'))
 })
 
 gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js'));

@@ -1,6 +1,6 @@
 <?php
 
-namespace SPSP\Front;
+namespace Super_Plugin\Front;
 
 class Init {
 
@@ -23,7 +23,7 @@ class Init {
 	}
 
 	public function assets() {
-		wp_enqueue_script( 'SPSP-front' );
-		wp_enqueue_style( 'SPSP-front' );
+		wp_enqueue_script( 'supl-front' );
+		wp_enqueue_style( 'supl-front' );
 	}
 }
