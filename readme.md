@@ -17,7 +17,14 @@
 * Search for **`SUPL`** and replace with your prefix. This is used as PHP constant prefix. Could be a 4 letter prefix, or full name all **uppercase**. E.G: **`MYPL`** or **`MY_PLUGIN`**
 
 * Search for **`supl`** and replace with your prefix. This is used as prefix for files. Could be a 4 letter prefix, or full name all **kebab-case**. E.G: **`mypl`** or **`my-plugin`** (4 letter prefix is recommended)
+---
+### Plugin Development
+* Run `composer install`
+* Run `npm install`
+* Run `compose dump-autoload`
+* Run `gulp`
 
+There are gulp tasks to make work easier. Check the using `gulp --tasks`
 
 ---
 ### Branching:
