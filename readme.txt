@@ -9,7 +9,7 @@ Stable tag: 0.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Short Description about super plugin.
+Short Description about Super Plugin.
 
 == Description ==
 
