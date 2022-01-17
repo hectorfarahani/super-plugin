@@ -213,7 +213,7 @@ gulp.task('watch', function (cb) {
 // Copy task
 gulp.task('copy', function () {
   return gulp.src(srcs)
-    .pipe(gulp.dest('/home/hector/svn-releases/super-plugin/trunk'))
+    .pipe(gulp.dest('./build'))
 })
 
-gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js'));
+gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js', 'copy'));

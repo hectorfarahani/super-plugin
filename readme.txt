@@ -3,7 +3,7 @@ Contributors: h71
 Donate link: https://dogechain.info/address/DHekFiwAXYc194FYD4jiv87PNv6WWD5K64
 Tags: Plugin, Boilerplate
 Requires at least: 5.1
-Tested up to: 5.6
+Tested up to: 5.8
 Requires PHP: 7.0
 Stable tag: 0.0.0
 License: GPLv3

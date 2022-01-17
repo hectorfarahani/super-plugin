@@ -8,3 +8,5 @@ vendor
 front/assets/dist
 admin/assets/dist
 svn-assets
+build
+release
