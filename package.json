@@ -20,6 +20,6 @@
     "gulp-touch-fd": "2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-wp-pot": "^2.5.0",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.3"
   }
 }
